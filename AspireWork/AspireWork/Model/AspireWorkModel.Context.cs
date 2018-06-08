@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AspireWork
+namespace AspireWork.Model
 {
     using System;
     using System.Data.Entity;

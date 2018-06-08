@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AspireWork"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="AspireWorkflowMain" Height="900" Width="1440">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="20*" />
+           
+            <RowDefinition Height="15*" />
+        </Grid.RowDefinitions>
+        <Menu Width="Auto" Height="Auto" Grid.Row="0" VerticalAlignment="Center">
+            <MenuItem x:Name="File" Header="_File" HorizontalAlignment="Left"  Width="Auto">
+                <MenuItem x:Name="Exit" Header="E_xit" HorizontalAlignment="Left" Width="Auto"></MenuItem>
+            </MenuItem>
+
+        </Menu>
+        <TabControl HorizontalAlignment="Left" Height="Auto" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="Auto">
+            <TabItem Header="Transaction">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Suppliers">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
+    
 </Window>

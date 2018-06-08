@@ -94,32 +94,36 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AspireWorkModel.Context.cs">
+    <Compile Include="Model\AspireWorkModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AspireWorkModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="AspireWorkModel.cs">
+    <Compile Include="Model\AspireWorkModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AspireWorkModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="AspireWorkModel.Designer.cs">
+    <Compile Include="Model\AspireWorkModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AspireWorkModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Customers.cs">
+    <Compile Include="Model\Customers.cs">
       <DependentUpon>AspireWorkModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Projects.cs">
+    <Compile Include="Model\Projects.cs">
       <DependentUpon>AspireWorkModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Suppliers.cs">
+    <Compile Include="Model\Suppliers.cs">
       <DependentUpon>AspireWorkModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Transactions.cs">
+    <Compile Include="Model\Transactions.cs">
       <DependentUpon>AspireWorkModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DataAccessService.cs" />
+    <Compile Include="UserControls\TransactionUC.xaml.cs">
+      <DependentUpon>TransactionUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -135,6 +139,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\TransactionUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -154,11 +162,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="AspireWorkModel.edmx">
+    <EntityDeploy Include="Model\AspireWorkModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AspireWorkModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="AspireWorkModel.edmx.diagram">
+    <None Include="Model\AspireWorkModel.edmx.diagram">
       <DependentUpon>AspireWorkModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config">
@@ -174,16 +182,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Infra\" />
-    <Folder Include="Model\" />
-    <Folder Include="UserControls\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AspireWorkModel.Context.tt">
+    <Content Include="Model\AspireWorkModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AspireWorkModel.edmx</DependentUpon>
       <LastGenOutput>AspireWorkModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="AspireWorkModel.tt">
+    <Content Include="Model\AspireWorkModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AspireWorkModel.edmx</DependentUpon>
       <LastGenOutput>AspireWorkModel.cs</LastGenOutput>

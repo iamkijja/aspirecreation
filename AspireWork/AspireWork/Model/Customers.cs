@@ -7,21 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AspireWork
+namespace AspireWork.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Transactions
+    public partial class Customers
     {
         public int Id { get; set; }
-        public string TransactionType { get; set; }
-        public Nullable<System.DateTime> TransactionDate { get; set; }
-        public Nullable<double> TransactionAmount { get; set; }
-        public Nullable<int> SupplierID { get; set; }
-        public Nullable<int> CustomerID { get; set; }
-        public Nullable<double> WHTAmount { get; set; }
-        public Nullable<double> VATAmount { get; set; }
-        public string ReferenceURL { get; set; }
+        public string CustomerName { get; set; }
+        public string Address { get; set; }
+        public string TaxID { get; set; }
+        public string Information { get; set; }
     }
 }

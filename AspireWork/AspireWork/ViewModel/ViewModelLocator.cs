@@ -15,6 +15,7 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
+using AspireWork.Services;
 
 namespace AspireWork.ViewModel
 {
@@ -43,6 +44,7 @@ namespace AspireWork.ViewModel
             ////}
 
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<IDataAccessService>();
         }
 
         public MainViewModel Main

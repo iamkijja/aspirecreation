@@ -7,17 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AspireWork
+namespace AspireWork.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Customers
+    public partial class Suppliers
     {
         public int Id { get; set; }
-        public string CustomerName { get; set; }
-        public string Address { get; set; }
+        public string SupplierName { get; set; }
+        public string SupplierAddress { get; set; }
         public string TaxID { get; set; }
-        public string Information { get; set; }
+        public Nullable<bool> Individual { get; set; }
+        public string BankInfo { get; set; }
+        public string Note { get; set; }
     }
 }
